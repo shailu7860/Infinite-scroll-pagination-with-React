@@ -1,13 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import Home from './Home';
 import reportWebVitals from './reportWebVitals';
 
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Pagination from './components/pagination';
+export default function App() {
+  return (
+    <>
+      
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path="/pagination" element={<Pagination />} />
+        </Routes>
+     
+    </>
+
+  );
+}
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+  <App />
+  </BrowserRouter>
   </React.StrictMode>
 );
 
