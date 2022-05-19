@@ -38,3 +38,16 @@
 .all{
     padding: 0px 13px;
 }
+.contact_button{
+    border-color: white;
+    border-width:2px;
+    font-weight:800px;
+     border-radius:20px;
+     color:white;
+}
+.contact_button:hover{
+    background-color: white;
+    color: #7510F7;
+    border-color: #7510F7;
+
+}

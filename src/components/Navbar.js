@@ -12,7 +12,9 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { Link } from 'react-router-dom';
+import userIcon from './Black_Minimalist_Initial_Font_BE_Logo-removebg-preview.png';
 import './Contact.css';
+import { Button } from '@mui/material';
 
 
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -47,7 +49,7 @@ const Navbaar = () => {
             // component="a"
             href="/"
             sx={{
-              mr: 2,
+              mr: 1,
             
               display: { xs: 'none', md: 'flex' },
               fontFamily: 'monospace',
@@ -58,8 +60,12 @@ const Navbaar = () => {
             }}
             
           >
-           
-              SHAILENDRA MISHRA
+           <Avatar sx={{
+             height:'100px',
+             width:'200px'
+              
+            }} alt='icon' src={userIcon} />
+            
           </Typography>
           </Link>
 
@@ -129,7 +135,7 @@ const Navbaar = () => {
           >
             Shailendra Mishra
           </Typography>
-          <Box  sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box  sx={{ ml:70, flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
           <Link to='/about' style={{textDecoration:'none'}}>
               <Typography
                 className='all'
@@ -141,7 +147,7 @@ const Navbaar = () => {
                 
               > 
                 
-                About
+                <button type="button"  className="btn btn-outline-primary contact_button ">About</button>
                
               </Typography> </Link>
               <Link to='/contact' style={{textDecoration:'none'}}>
@@ -155,13 +161,16 @@ const Navbaar = () => {
                 textDecoration: 'inline', }}
               > 
                 
-                Contact
+                {/* <Button style={{color:"white",border:'1px solid white',backgroundColor: "transparent",
+    borderColor: "#7510F7",
+    }} variant='outlined'>Contact</Button>  */}
+    <button type="button"  className="btn btn-outline-primary contact_button ">Contact</button>
                
               </Typography> </Link>
               
           </Box>
 
-          <Box sx={{ flexGrow: 0 }}>
+          {/* <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
               <AdbIcon  sx={{ display: { xs: 'none', md: 'flex' }, mr: 3,color:'white' }} />
@@ -190,7 +199,7 @@ const Navbaar = () => {
                 </MenuItem>
               ))}
             </Menu>
-          </Box>
+          </Box> */}
         </Toolbar>
       </Container>
     </AppBar>
