@@ -1,65 +1,45 @@
-import React, { useEffect, useState } from 'react';
 import './App.css';
-import axios from 'axios';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
+import Navbaar from './components/Navbar';
 
 function Home() {
-  
-  const [Data, setData] = useState([]);
-useEffect(()=>{
-  const api = async () => {
-
-    let apiData = await axios.get('https://hn.algolia.com/api/v1/search_by_date?tags=story&page=0 ')
- 
-   setData(apiData.data.hits)
-         
- 
-    }
-       api();
-       console.log(Data);
-},[Data])
-  
-    
-
- 
   return (
+
+
     <div className="App">
-       <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
-        <TableHead>
-          <TableRow>
-            <TableCell>Title (100g serving)</TableCell>
-            <TableCell align="right">URL</TableCell>
-            <TableCell align="right">Created_at&nbsp;(g)</TableCell>
-            <TableCell align="right">Author&nbsp;(g)</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {Data.map((row) => (
-            <TableRow
-              key={row.id}
-              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-            >
-              <TableCell component="th" scope="row">
-                {row.title}
-              </TableCell>
-              <TableCell align="right">{row.url}</TableCell>
-              <TableCell align="right">{row.created_at}</TableCell>
-              <TableCell align="right">{row.author}</TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
+      <Navbaar />
+      <div className="App-header">
+    
+        
+        <h1 data-testid="child" className='p_tag' >
+          <b>
+          Designer & Front-end Developer.
+          </b>
+        </h1>
+        <p className='p_tag2'>
+          
+          I design and code beautifully simple things, and I love what I do.
+       
+        </p>
+           
+      
+      <img src={"https://mattfarley.ca/img/mf-avatar.svg"} className="App-logo" alt="logo" />
+       </div>
+      <div className='about_me'>
+        <img src='https://mattfarley.ca/img/hero.svg' className='table_img' alt="table_image" />
+        </div>
+        <div className='summary'>
+          <div className='summary2'>
+          <h2 className='summary_text'>Hi, I’m Shailendra. Nice to meet you.</h2>
+          <p className='summary_text2'>Since beginning my journey as a WEB Developer nearly 1 years ago, I've done remote work for agencies, consulted for startups, and collaborated with talented people to create digital products for both business and consumer use. I'm quietly confident, naturally curious, and perpetually working on improving my chops one design problem at a time.
+          </p>
+          </div>
+        
+         </div>
+        
       
     </div>
   );
 }
+
 
 export default Home;
