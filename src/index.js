@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './style/index.css';
 import Home from './Home';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
@@ -9,7 +9,7 @@ import Navbaar from './components/Navbar';
 import About from './components/About';
 import Contact from './components/Contact';
 import NoPage from './components/NoPage';
-import Data from './components/Data'
+import Data from './components/Data';
 
 export default function App() {
   return (

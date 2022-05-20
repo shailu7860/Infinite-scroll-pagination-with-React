@@ -2,7 +2,7 @@ import { useNavigate,useLocation } from 'react-router-dom';
 import React from 'react';
 import { Button } from '@mui/material';
 import Navbaar from './Navbar';
-import '../App.css';
+import '../style/App.css';
 
 const Component=()=> {
     
@@ -17,8 +17,11 @@ const Component=()=> {
          <br />
        
         <div style={{width:"100%"}} >
-         <p style={{display: "flex", flexWrap: "wrap", padding: "5px 35px", width: "100%", justifyContent: "center", overflowWrap:"anywhere"}} > {JSON.stringify(name)}
+        
+        
+         <p style={{display: "flex", flexWrap: "wrap", padding: "5px 35px", width: "100%", justifyContent: "center", overflowWrap:"anywhere"}} > {name}
          </p>
+
           </div>
         
         <br />

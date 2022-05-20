@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
-import '../App.css';
-import './Contact.css';
+import '../style/App.css';
+import '../style/Contact.css';
 import InfiniteScroll from "react-infinite-scroll-component"
 import axios from 'axios';
 import Table from '@mui/material/Table';

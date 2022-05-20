@@ -4,29 +4,27 @@ import About from "./About"
 import Enzyme from 'enzyme';
 import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 import MockAdapter from "axios-mock-adapter";
-import axios from 'axios'
+import axios from 'axios';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-let wrapper
-
-Enzyme.configure({ adapter: new Adapter() });
 
 describe('<About /> component', () => {
 
-  
-  test('it renders', () => {
-    
-    // render(<About />);
-
-    expect(screen.getByText('Title')).toBeInTheDocument();
-  });
  
-    const wrapper = shallow(<About />);
+ 
+    
   
     it('check text when render', () => {
-      const tree = toJson(wrapper);
-      expect(screen.getByText('Title')).toBeInTheDocument()
-
-    });
+      const wrapper = shallow(
+      <BrowserRouter>
+      <Routes>
+        <Route path="*" element={<About  policyTypes={false} />} />
+      </Routes>
+    </BrowserRouter>);
+    console.log(wrapper.debug());
+  expect(wrapper.exists('.homecls')).toEqual(false);
+      });
+  
   });
 
 //   it('should run getpost method', () => {

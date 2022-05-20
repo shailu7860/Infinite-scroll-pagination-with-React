@@ -1,0 +1,53 @@
+.text{
+    color: rgb(7, 7, 7);
+    text-align: center;
+    padding-top: 40px;
+}
+
+.form{
+    padding: 48px 0px;
+    display: flex;
+    justify-content: space-around;
+    color: black;
+}
+.about{
+    width: 100%;
+   
+   display: block;
+
+    overflow: scroll;
+}
+.about .image_back{
+ 
+    background-repeat: no-repeat;
+    background-size: contain;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+
+}
+.nav_bar{
+    display: flex;
+}
+.container{
+    text-decoration: none;
+    color:black;
+    overflow-y: hidden;
+  
+}
+.all{
+    padding: 0px 13px;
+}
+.contact_button{
+    border-color: white;
+    border-width:2px;
+    font-weight:800px;
+     border-radius:20px;
+     color:white;
+}
+.contact_button:hover{
+    background-color: white;
+    color: #7510F7;
+    border-color: #7510F7;
+
+}
