@@ -51,3 +51,13 @@
     border-color: #7510F7;
 
 }
+
+.Card{
+    width: 100%;
+    background-color: white;
+    position: relative;
+    display: inline-block;
+    flex-wrap: wrap;
+
+    align-items: center;
+}
