@@ -40,28 +40,28 @@ img {
 }
 
 .App .App-header {
- -webkit-box-flex: 1;
-    flex-grow: 1;
-    flex-shrink: 0;
-    padding: 3rem 1.5rem;
-    margin: 0 auto;
-    position: relative;
-    width: auto;
-    -webkit-box-pack: center;
-    justify-content: center;
-    display: block;
-    flex-basis: 0;
-    -webkit-box-flex: 1;
-    flex-grow: 1;
-    flex-shrink: 1;
+  width: 100%!important;
+  flex-grow: 1;
+  flex-shrink: 0;
+  padding: 3rem 1.5rem;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
 
 }
 
 .App .App-header .p_tag {
   color: black;
-  display: block;
+  display: flex;
   font-size: 50px;
   padding: 0.8rem;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
    
 }
 .color{
@@ -70,10 +70,14 @@ img {
 }
 .App .App-header .p_tag2 {
   color: black;
-  font-size: large;
-  display: block;
-  font-weight: 300;
-  padding: 0.8rem;
+    font-size: large;
+    display: flex;
+    font-weight: 300;
+    padding: 0.8rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
 }
 .App .about_me{
   width: 100%;
@@ -81,38 +85,55 @@ img {
 
 }
 .App .summary{
-  width: 100%;
+   width: 100%;
   display: flex;
   justify-content: center;
   background-color: #7510F7;
-  
   color: white;
-
+  padding-bottom: 14rem;
   
 }
-.App .summary .summary2{
+
+.App .summary.about_card{
   width: 100%;
-  padding: 6rem 4rem;
+  position: absolute;
+  top: 85rem;
+  left: 6rem;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+ flex-direction: row;
+}
+.App .summary .summary2{
+  width: 530px;
+  padding: 9rem 0;
 }
 
 .App .summary .summary_text{
  
   font-family: "europa", sans-serif;
-  font-weight: 500;
+  font-weight: 300;
   line-height: 1.2;
 }
 .App .summary .summary_text2{
   
   font-family: "europa", sans-serif;
-    font-weight: 300;
-    text-align: center;
-    display: inline-flex;
-    padding-top: 15px;
-    width: 60%;
-    line-height: 2;
-
+  font-weight: 300;
+  line-height: 1.5;
+  padding: 0 15px;
 }
 
+@media screen and (max-width: 768px){
+  .is-size-3-mobile {
+      font-size: 2rem !important;
+  }
+  .is-size-2-mobile {
+    max-width: 100%;
+    width: 100%;
+
+    font-size: 2rem !important;
+}
+  }
 .App .about_me .table_img{
   margin-bottom: -0.3rem;
 }

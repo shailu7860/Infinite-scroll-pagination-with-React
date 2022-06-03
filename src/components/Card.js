@@ -13,10 +13,7 @@ export default function MediaCard(props) {
                 height="140"
                 image={props.image}
                 alt="green iguana"
-                style={{width: "fit-content",
-                    position: "absolute",
-                    left: "140px",
-                    top: "20px"}}
+                style={{width: "fit-content"}}
             />
             <CardContent>
                 <Typography gutterBottom variant="h5" component="div">

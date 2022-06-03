@@ -56,8 +56,12 @@
     width: 100%;
     background-color: white;
     position: relative;
-    display: inline-block;
+    display: flex;
     flex-wrap: wrap;
-
     align-items: center;
+    justify-content: center;
+    padding: 0px 24px;
+}
+.Card p{
+    margin-bottom: 1rem!important;
 }

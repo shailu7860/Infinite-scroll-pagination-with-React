@@ -136,14 +136,15 @@ const Navbaar = () => {
           >
             Shailendra Mishra
           </Typography>
-          <Box sx={{ ml: 65, flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={{ ml: 65, flexGrow: 1, justifyContent:"flex-end" ,display: { xs: 'none', md: 'flex' } }}>
             <Link to='/about' style={{ textDecoration: 'none' }}>
               <Typography
                 className='all'
                 // onClick={handleCloseNavMenu}
                 sx={{
-                  my: 5, color: 'white', display: 'block', fontFamily: 'monospace',
+                  my: 5, color: 'white', display: 'flex', fontFamily: 'monospace',
                   fontWeight: 600,
+                  
                   letterSpacing: '.1rem',
                   textDecoration: 'inline',
                 }}

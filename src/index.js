@@ -10,6 +10,7 @@ import About from './components/About';
 import Contact from './components/Contact';
 import NoPage from './components/NoPage';
 import Data from './components/Data';
+import Resume from './components/Resume';
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
           <Route path="/data" element={<Data />} />
+          <Route path="/resume" element={<Resume />} />
           <Route path="*" element={<NoPage />} />
         </Routes>
      
